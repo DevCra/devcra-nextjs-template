@@ -39,4 +39,5 @@ export const defaultAuth: NextAuthConfig = {
       };
     },
   },
+  trustHost: true,
 };
