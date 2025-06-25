@@ -5,7 +5,7 @@ import "./globals.css";
 import { pretendardStd } from "@/components/fonts";
 import clsx from "clsx";
 import NextTopLoader from "nextjs-toploader";
-
+import ModalRoot from "../ui/modal/ModalRoot";
 export const metadata: Metadata = {
   title: "devcra-nextjs-template",
   description: "DevCra.com",
@@ -35,8 +35,8 @@ export default function RootLayout({
           speed={200}
           shadow="0 0 10px #2299DD, 0 0 5px #2299DD"
         />
-
         {children}
+        <ModalRoot />
       </body>
     </html>
   );
