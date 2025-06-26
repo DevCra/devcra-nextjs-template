@@ -21,12 +21,13 @@ type GnbItem = {
 };
 
 const GNB_KEY = {
-  ui_breadcrumb: "ui_breadcrumb",
-  ui_gnb: "ui_gnb",
-  ui_table: "ui_table",
-  ui_pagination: "ui_pagination",
-  ui_modal: "ui_modal",
-  ui_select: "ui_select",
+  ui_button: "ui_button",
+  // ui_breadcrumb: "ui_breadcrumb",
+  // ui_gnb: "ui_gnb",
+  // ui_table: "ui_table",
+  // ui_pagination: "ui_pagination",
+  // ui_modal: "ui_modal",
+  // ui_select: "ui_select",
 } as const;
 
 type GnbKey = keyof typeof GNB_KEY;
@@ -37,35 +38,40 @@ const getGnbItems = (): GnbItem[] => [
     href: "/ui",
     children: [
       {
-        name: "Breadcrumb",
-        href: "/ui/breadcrumb",
-        key: GNB_KEY.ui_breadcrumb,
+        name: "Button",
+        href: "/ui/button",
+        key: GNB_KEY.ui_button,
       },
-      {
-        name: "Gnb",
-        href: "/ui/gnb",
-        key: GNB_KEY.ui_gnb,
-      },
-      {
-        name: "Table",
-        href: "/ui/table",
-        key: GNB_KEY.ui_table,
-      },
-      {
-        name: "Pagination",
-        href: "/ui/pagination",
-        key: GNB_KEY.ui_pagination,
-      },
-      {
-        name: "Modal",
-        href: "/ui/modal",
-        key: GNB_KEY.ui_modal,
-      },
-      {
-        name: "Select",
-        href: "/ui/select",
-        key: GNB_KEY.ui_select,
-      },
+      // {
+      //   name: "Breadcrumb",
+      //   href: "/ui/breadcrumb",
+      //   key: GNB_KEY.ui_breadcrumb,
+      // },
+      // {
+      //   name: "Gnb",
+      //   href: "/ui/gnb",
+      //   key: GNB_KEY.ui_gnb,
+      // },
+      // {
+      //   name: "Table",
+      //   href: "/ui/table",
+      //   key: GNB_KEY.ui_table,
+      // },
+      // {
+      //   name: "Pagination",
+      //   href: "/ui/pagination",
+      //   key: GNB_KEY.ui_pagination,
+      // },
+      // {
+      //   name: "Modal",
+      //   href: "/ui/modal",
+      //   key: GNB_KEY.ui_modal,
+      // },
+      // {
+      //   name: "Select",
+      //   href: "/ui/select",
+      //   key: GNB_KEY.ui_select,
+      // },
     ],
   },
 ];
@@ -73,12 +79,13 @@ const getGnbItems = (): GnbItem[] => [
 // TODO: 실제 구현시에는 API로부터 엑세스 가능한 목록을 가져오기
 //! 리액트 쿼리로 서버 상태 관리, stale/gc time 설정 필요
 const userPermissionItems = {
-  ui_breadcrumb: ["R"],
-  ui_gnb: ["R"],
-  ui_table: ["R"],
-  ui_pagination: ["R"],
-  ui_modal: ["R"],
-  ui_select: ["R"],
+  ui_button: ["R"],
+  // ui_breadcrumb: ["R"],
+  // ui_gnb: ["R"],
+  // ui_table: ["R"],
+  // ui_pagination: ["R"],
+  // ui_modal: ["R"],
+  // ui_select: ["R"],
 };
 
 const getFilteredMenuByPermissions = (
