@@ -1,6 +1,7 @@
 "use client";
 
 import Gnb from "./Gnb";
+import GnbSimple from "./GnbSimple";
 
 export default function GnbExample() {
   return (
@@ -66,6 +67,23 @@ const getGnbItems = (): GnbItem[] => [
               <div className="text-center text-gray-500">
                 <p>메인 콘텐츠 영역</p>
                 <p className="text-sm mt-2">왼쪽 GNB에서 메뉴를 선택해보세요</p>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 className="text-lg font-semibold mb-4">실제 예제2</h2>
+        <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+          <div className="flex h-[500px]">
+            <GnbSimple />
+            <main className="flex-1 p-6 bg-gray-50">
+              <div className="text-center text-gray-500">
+                <p>수정사항</p>
+                <p className="text-sm mt-2">
+                  1. parent 클릭 시, open/close만 진행
+                </p>
+                <p className="text-sm mt-2">2. 첫번째 메뉴 오픈 상태</p>
               </div>
             </main>
           </div>
