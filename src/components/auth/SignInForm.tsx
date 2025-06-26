@@ -173,7 +173,7 @@ export function SignInForm({ error, callbackUrl = "/" }: SignInFormProps) {
       <div>
         <button
           type="submit"
-          className="cursor-pointer flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          className="cursor-pointer flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           {loading ? (
             <Spinner className="w-6 h-6 dark:text-gray-600 text-gray-300 fill-indigo-600" />
