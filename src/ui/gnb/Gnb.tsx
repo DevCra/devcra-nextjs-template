@@ -22,6 +22,7 @@ type GnbItem = {
 
 const GNB_KEY = {
   ui_button: "ui_button",
+  ui_tab: "ui_tab",
   // ui_breadcrumb: "ui_breadcrumb",
   // ui_gnb: "ui_gnb",
   // ui_table: "ui_table",
@@ -41,6 +42,11 @@ const getGnbItems = (): GnbItem[] => [
         name: "Button",
         href: "/ui/button",
         key: GNB_KEY.ui_button,
+      },
+      {
+        name: "tab",
+        href: "/ui/tab",
+        key: GNB_KEY.ui_tab,
       },
       // {
       //   name: "Breadcrumb",
@@ -80,6 +86,7 @@ const getGnbItems = (): GnbItem[] => [
 //! 리액트 쿼리로 서버 상태 관리, stale/gc time 설정 필요
 const userPermissionItems = {
   ui_button: ["R"],
+  ui_tab: ["R"],
   // ui_breadcrumb: ["R"],
   // ui_gnb: ["R"],
   // ui_table: ["R"],
