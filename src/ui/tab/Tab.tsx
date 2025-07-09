@@ -6,9 +6,16 @@ interface TabProps {
   index: number; // 현재 활성화된 탭 인덱스
   setIndex: (index: number) => void; // 탭 변경 함수
   renderContent?: (index: number) => ReactNode; // 탭에 따라 렌더링할 콘텐츠
+  animated?: boolean; // 애니메이션 활성화 여부
 }
 
-const Tab = ({ tabs, index, setIndex, renderContent }: TabProps) => {
+const Tab = ({
+  tabs,
+  index,
+  setIndex,
+  renderContent,
+  animated = true,
+}: TabProps) => {
   const [barStyle, setBarStyle] = useState({ width: 0, left: 0 });
   const tabRefs = useRef<HTMLButtonElement[]>([]);
 
@@ -31,7 +38,8 @@ const Tab = ({ tabs, index, setIndex, renderContent }: TabProps) => {
             }}
             onClick={() => setIndex(i)}
             className={clsx(
-              "px-4 py-2 text-sm font-medium transition-colors duration-300",
+              "px-4 py-2 text-sm font-medium",
+              animated && "transition-colors duration-300",
               index === i
                 ? "text-indigo-600"
                 : "text-gray-500 hover:text-indigo-600",
@@ -43,7 +51,10 @@ const Tab = ({ tabs, index, setIndex, renderContent }: TabProps) => {
 
         {/* 애니메이션 바 */}
         <div
-          className="absolute bottom-0 h-0.5 bg-indigo-600 transition-all duration-300"
+          className={clsx(
+            "absolute bottom-0 h-0.5 bg-indigo-600",
+            animated && "transition-all duration-300",
+          )}
           style={{
             width: `${barStyle.width}px`,
             left: `${barStyle.left}px`,
@@ -54,8 +65,13 @@ const Tab = ({ tabs, index, setIndex, renderContent }: TabProps) => {
       {/* 탭 콘텐츠 */}
       <div className="relative mt-4 overflow-hidden">
         <div
-          className="flex transition-transform duration-300"
-          style={{ transform: `translateX(-${index * 100}%)` }}
+          className={clsx(
+            "flex",
+            animated && "transition-transform duration-300",
+          )}
+          style={{
+            transform: `translateX(-${index * 100}%)`,
+          }}
         >
           {tabs.map((_, i) => (
             <div key={i} className="w-full flex-shrink-0">
