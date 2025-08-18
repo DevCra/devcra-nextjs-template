@@ -37,3 +37,13 @@ $ yarn dev
 **P/R 환영**
 
 #b_client_dev 로 오셔서 의견주셔도 됩니다.
+
+###
+
+Next 템플릿
+
+- [github 레포](https://github.com/DevCra/devcra-nextjs-template)
+- [feat/ui 브랜치](https://github.com/DevCra/devcra-nextjs-template/tree/feat/ui)
+  - 라이브러리 공식문서와 같은 ui 페이지 구성 및 컴포넌트
+    - breadcrumb, button, gnb, input, modal, pagination, select, table
+  - headless ui 방식의 Button 컴포넌트 제작
