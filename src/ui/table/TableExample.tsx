@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { type ColumnDef, type SortingState } from "@tanstack/react-table";
 import Table from "./Table";
+import TableComponentExample from "@/ui/table/TableComponentExample";
 
 // 예제 데이터 타입 정의
 interface User {
@@ -161,6 +162,7 @@ const columns: ColumnDef<User>[] = [
               tableClassName: "min-h-[400px]",
             }}
           />
+          <TableComponentExample />
         </div>
       </div>
 
